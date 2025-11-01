@@ -38,8 +38,9 @@ clean:
 	rm -rf $(APP_TARGETS)
 
 debug: $(APP).bin
+	pkill -f $(QEMU)	# Avoid creating idle qemu processes
 	$(QEMU) -m $(RAM) -M $(MACHINE) $(VMFLAGS) -D $(VMLOG) $(VMDEBUG) -kernel $(APP).bin &
-	$(GDB) -x ~/.gdbinit -x $(APP)-qemu.gdb
+	$(GDB) -x $(APP)-qemu.gdb
 
 # TODO: Add a target surrounded by an ifdef $(TERMUX) for simulating serial output on 
 # a separate window. I use st (suckless simple terminal), but hardcoding this wouldn't be portable.
