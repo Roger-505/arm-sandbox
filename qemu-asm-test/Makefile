@@ -34,11 +34,11 @@ $(APP): start.o
 
 .PHONY: clean
 clean:
-	rm -rf *.o *.log
+	rm -rf *.o *.log .gdb_history
 	rm -rf $(APP_TARGETS)
 
 debug: $(APP).bin
-	pkill -f $(QEMU)	# Avoid creating idle qemu processes
+	-pkill -f $(QEMU)  # Avoid creating idle qemu processes
 	$(QEMU) -m $(RAM) -M $(MACHINE) $(VMFLAGS) -D $(VMLOG) $(VMDEBUG) -kernel $(APP).bin &
 	$(GDB) -x $(APP)-qemu.gdb
 
