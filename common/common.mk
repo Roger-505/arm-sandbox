@@ -4,7 +4,7 @@ CC = $(CROSS_COMPILE)gcc
 LD = $(CROSS_COMPILE)ld
 OBJCOPY = $(CROSS_COMPILE)objcopy
 OBJDUMP = $(CROSS_COMPILE)objdump
-GDB = $(CROSS_COMPILE)gdb
+GDB ?= $(CROSS_COMPILE)gdb
 
 %.bin: %
 	$(OBJCOPY) -O binary $< $@
