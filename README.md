@@ -10,7 +10,7 @@ For Debian/Ubuntu, install the needed packages. Issue the following command:
 
 sudo apt install qemu-system-aarch64 gdb-multiarch binutils build-essential
 
-Install the Aarch64 bare-metal target (aarch64-none-elf) for your host machine. 
-Binaries may be downloaded on the following link:
+Install the Aarch64 bare-metal target (aarch64-none-elf) toolchain for your 
+host machine. Binaries may be downloaded on the following link:
 
 https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
