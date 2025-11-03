@@ -4,7 +4,7 @@ The emulation will be done mainly with QEMU.
 
 This project is licensed under the terms of the MIT license; see LICENSE file.
 
-## qemu-asm-test 
+## qemu-asm/qemu-asm-c-template
 
 For Debian/Ubuntu, install the needed packages. Issue the following command:
 
